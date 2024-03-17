@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        tools:text="@string/app_name"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/cb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_color"
+        tools:text="@string/app_name"
+        android:textSize="16sp"
+        android:button="@drawable/check_box_blue_with_insets"
+        android:visibility="gone" />
+
+    <RadioButton
+        android:id="@+id/radioView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:textColor="@color/app_color"
+        tools:text="@string/app_name"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:button="@drawable/dialog_radio_insets" />
+
+</FrameLayout>

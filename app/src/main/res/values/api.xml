@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dev_server" translatable="false">https://DEV.quicksolveplus.com:443</string>
+</resources>

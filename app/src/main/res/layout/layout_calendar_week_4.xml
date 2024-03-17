@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_4sdp"
+    android:orientation="horizontal"
+    android:tag="weekRow4"
+    android:weightSum="7"
+    android:baselineAligned="false">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer22">
+
+        <com.quicksolveplus.utils.calendar.ServiceRecordDayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:tag="serviceRecordDayOfMonthText22"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.DayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="22"
+            android:tag="dayOfMonthText22"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.ScheduledDayView
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/circle_app_color"
+            android:gravity="center_horizontal"
+            android:tag="scheduledDayOfMonthText22"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer23">
+
+        <com.quicksolveplus.utils.calendar.ServiceRecordDayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:tag="serviceRecordDayOfMonthText23"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.DayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="23"
+            android:tag="dayOfMonthText23"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.ScheduledDayView
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/circle_app_color"
+            android:gravity="center_horizontal"
+            android:tag="scheduledDayOfMonthText23"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer24">
+
+        <com.quicksolveplus.utils.calendar.ServiceRecordDayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:tag="serviceRecordDayOfMonthText24"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.DayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="24"
+            android:tag="dayOfMonthText24"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.ScheduledDayView
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/circle_app_color"
+            android:gravity="center_horizontal"
+            android:tag="scheduledDayOfMonthText24"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer25">
+
+        <com.quicksolveplus.utils.calendar.ServiceRecordDayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:tag="serviceRecordDayOfMonthText25"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.DayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="25"
+            android:tag="dayOfMonthText25"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.ScheduledDayView
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/circle_app_color"
+            android:gravity="center_horizontal"
+            android:tag="scheduledDayOfMonthText25"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer26">
+
+        <com.quicksolveplus.utils.calendar.ServiceRecordDayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:tag="serviceRecordDayOfMonthText26"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.DayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="26"
+            android:tag="dayOfMonthText26"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.ScheduledDayView
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/circle_app_color"
+            android:gravity="center_horizontal"
+            android:tag="scheduledDayOfMonthText26"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer27">
+
+        <com.quicksolveplus.utils.calendar.ServiceRecordDayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:tag="serviceRecordDayOfMonthText27"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.DayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="27"
+            android:tag="dayOfMonthText27"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.ScheduledDayView
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/circle_app_color"
+            android:gravity="center_horizontal"
+            android:tag="scheduledDayOfMonthText27"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer28">
+
+        <com.quicksolveplus.utils.calendar.ServiceRecordDayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:tag="serviceRecordDayOfMonthText28"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.DayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="28"
+            android:tag="dayOfMonthText28"
+            style="@style/DayOfTheMonth" />
+
+        <com.quicksolveplus.utils.calendar.ScheduledDayView
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/circle_app_color"
+            android:gravity="center_horizontal"
+            android:tag="scheduledDayOfMonthText28"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</LinearLayout>

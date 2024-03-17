@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#FF000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_10">#1A000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_10">#1AFFFFFF</color>
+
+    <color name="app_color">#2866A8</color>
+    <color name="app_bg">#F3F3F3</color>
+    <color name="border">#B3B3B3</color>
+
+    <color name="gray_light">#979797</color>
+    <color name="green">#17880E</color>
+    <color name="red">#e85454</color>
+    <color name="blue">#46d3fb</color>
+    <color name="dark_blue">#082A49</color>
+
+    <color name="color_hint">#C0C0C0</color>
+    <color name="green_light">#73BC78</color>
+    <color name="red_light">#E38281</color>
+
+    <color name="btn_blue_bg">#46d3fb</color>
+
+    <color name="color_archive">#979797</color>
+    <color name="color_read">#34C759</color>
+    <color name="color_unread">#FF3B30</color>
+    <color name="color_pending">#FA7421</color>
+
+    <color name="day_disabled_background_color">#F1F5F8</color>
+    <color name="day_disabled_text_color">#DEDEDE</color>
+    <color name="selected_day_background">#03A7E9</color>
+    <color name="current_day_of_month">#03A7E9</color>
+
+</resources>

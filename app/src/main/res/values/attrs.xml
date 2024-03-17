@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomCalendarView">
+        <attr name="calendarTitleTextColor" format="color" />
+        <attr name="dayOfWeekTextColor" format="color" />
+        <attr name="dayOfMonthTextColor" format="color" />
+        <attr name="calendarBackgroundColor" format="color" />
+        <attr name="disabledDayBackgroundColor" format="color" />
+        <attr name="disabledDayTextColor" format="color" />
+        <attr name="selectedDayBackgroundColor" format="color" />
+        <attr name="selectedDayTextColor" format="color" />
+        <attr name="weekLayoutBackgroundColor" format="color" />
+        <attr name="titleLayoutBackgroundColor" format="color" />
+        <attr name="currentDayOfMonthColor" format="color" />
+        <attr name="selectedDayBackground" format="reference" />
+    </declare-styleable>
+
+
+    <!-- Swipe layout (left,right) -->
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level" value="1" />
+        </attr>
+        <attr name="flingVelocity" format="integer" />
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+    <!-- Rounded FrameLayout -->
+    <declare-styleable name="SkyRoundCornerLayout">
+        <attr name="cornerRadiusFrameLayout" format="dimension" />
+        <attr name="topEnabled" format="boolean" />
+        <attr name="bottomEnabled" format="boolean" />
+        <attr name="topLeftEnabled" format="boolean" />
+        <attr name="topRightEnabled" format="boolean" />
+        <attr name="bottomLeftEnabled" format="boolean" />
+        <attr name="bottomRightEnabled" format="boolean" />
+    </declare-styleable>
+
+    <!-- Rounded RelativeLayout -->
+    <declare-styleable name="RoundedRelativeLayout">
+        <attr name="cornerRadiusRelativeLayout" format="dimension" />
+    </declare-styleable>
+
+    <!-- Round Imageview -->
+    <declare-styleable name="RoundishImageView">
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="roundedCorners">
+            <flag name="topLeft" value="1" />
+            <flag name="topRight" value="2" />
+            <flag name="bottomRight" value="4" />
+            <flag name="bottomLeft" value="8" />
+            <flag name="all" value="15" />
+        </attr>
+    </declare-styleable>
+
+    <!-- Custom Font -->
+    <declare-styleable name="CustomTextView">
+        <attr name="fontName" format="string" />
+    </declare-styleable>
+
+    <!-- Number Picker -->
+    <attr name="numberPickerStyle" format="reference" />
+    <declare-styleable name="NumberPicker">
+        <attr name="np_width" format="dimension" />
+        <attr name="np_height" format="dimension" />
+        <attr name="np_dividerColor" format="color" />
+        <attr name="np_dividerDistance" format="dimension" />
+        <attr name="np_dividerThickness" format="dimension" />
+        <attr name="np_formatter" format="string" />
+        <attr name="np_max" format="integer" />
+        <attr name="np_min" format="integer" />
+        <attr name="np_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="np_textColor" format="color" />
+        <attr name="np_textSize" format="dimension" />
+        <attr name="np_typeface" format="string" />
+    </declare-styleable>
+
+    <!-- Signaturepad -->
+    <declare-styleable name="SignaturePad">
+        <attr name="onTouch" format="boolean" />
+        <attr name="signMinWidth" format="float" />
+        <attr name="signMaxWidth" format="float" />
+        <attr name="penColor" format="color" />
+        <attr name="velocityFilterWeight" format="float" />
+    </declare-styleable>
+
+    <!-- StickyHeaders Listview -->
+    <declare-styleable name="StickyListHeadersListView">
+        <attr name="stickyListHeadersListViewStyle" format="reference" />
+        <!-- View attributes -->
+        <attr name="android:clipToPadding" />
+        <attr name="android:scrollbars" />
+        <attr name="android:overScrollMode" />
+        <attr name="android:padding" />
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingTop" />
+        <attr name="android:paddingRight" />
+        <attr name="android:paddingBottom" />
+        <!-- ListView attributes -->
+        <attr name="android:fadingEdgeLength" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:cacheColorHint" />
+        <attr name="android:choiceMode" />
+        <attr name="android:drawSelectorOnTop" />
+        <attr name="android:fastScrollEnabled" />
+        <attr name="android:fastScrollAlwaysVisible" />
+        <attr name="android:listSelector" />
+        <attr name="android:scrollingCache" />
+        <attr name="android:scrollbarStyle" />
+        <attr name="android:divider" />
+        <attr name="android:dividerHeight" />
+        <attr name="android:transcriptMode" />
+        <attr name="android:stackFromBottom" />
+        <!-- StickyListHeaders attributes -->
+        <attr name="hasStickyHeaders" format="boolean" />
+        <attr name="isDrawingListUnderStickyHeader" format="boolean" />
+    </declare-styleable>
+
+    <!-- Swipable layout -->
+    <declare-styleable name="SwipeLayout">
+        <attr name="drag_edge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="leftEdgeSwipeOffset" format="dimension" />
+        <attr name="rightEdgeSwipeOffset" format="dimension" />
+        <attr name="topEdgeSwipeOffset" format="dimension" />
+        <attr name="bottomEdgeSwipeOffset" format="dimension" />
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0" />
+            <enum name="pull_out" value="1" />
+        </attr>
+        <attr name="clickToClose" format="boolean" />
+    </declare-styleable>
+    <!--Masked EditText for PhoneNumber validation-->
+    <declare-styleable name="MaskedEditText">
+        <attr name="mask" format="string" />
+        <attr name="notMaskedSymbol" format="string" />
+        <attr name="replacementChar" format="string" />
+        <attr name="deleteChar" format="string" />
+        <attr name="format" format="string" />
+        <attr name="maskIcon" format="reference" />
+        <attr name="maskIconColor" format="reference" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+
+    <declare-styleable name="ProWebView">
+        <attr name="blankHtml" format="string" />
+        <attr name="home" format="string" />
+        <attr name="blacklist" format="reference" />
+        <attr name="privateMode" format="boolean" />
+        <attr name="blockAds" format="boolean" />
+        <attr name="locationMode" format="enum">
+            <enum name="modeBoth" value="1" />
+            <enum name="modeFine" value="2" />
+            <enum name="modeCoarse" value="3" />
+        </attr>
+        <attr name="javascriptEnabled" format="boolean" />
+        <attr name="locationEnabled" format="boolean" />
+        <attr name="cookiesEnabled" format="boolean" />
+        <attr name="thirdPartyCookiesEnabled" format="boolean" />
+        <attr name="cacheMode" format="enum">
+            <enum name="cacheElseNetwork" value="1" />
+            <enum name="cacheOnly" value="2" />
+            <enum name="cacheDefault" value="3" />
+            <enum name="noCache" value="4" />
+        </attr>
+        <attr name="nestedScrollingEnabled" format="boolean" />
+        <attr name="defaultProtocol" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ProWebViewControls">
+        <attr name="controlMode" format="enum">
+            <enum name="modeZoom" value="0" />
+            <enum name="modeNavigation" value="1" />
+            <enum name="modeDual" value="2" />
+        </attr>
+        <attr name="hideTimeout" format="integer" />
+    </declare-styleable>
+
+    <!--Indicator SeekBar-->
+    <declare-styleable name="IndicatorSeekBar">
+        //seekBar
+        <attr name="isb_max" format="float" /><!-- the max value of seekBar to seek, default 100-->
+        <attr name="isb_min" format="float" /><!-- the min value of seekBar to seek, default 0 -->
+        <attr name="isb_progress" format="float" /><!-- the current progress value of seekBar, default 0-->
+        <attr name="isb_progress_value_float" format="boolean" /><!--set the value of seekBar to float type, default false-->
+        <attr name="isb_seek_smoothly" format="boolean" /><!--true to seek smoothly when has ticks, default false-->
+        <attr name="isb_r2l" format="boolean" /><!--compat app local change,like arabic local, default false-->
+        <attr name="isb_ticks_count" format="integer" /><!--seekBar's ticks count, default zero-->
+        <attr name="isb_user_seekable" format="boolean" /><!--prevent user from seeking,only can be change thumb location by setProgress(), default false-->
+        <attr name="isb_clear_default_padding" format="boolean" /><!-- set seekBar's leftPadding&rightPadding to zero, default false, default padding is 16dp-->
+        <attr name="isb_only_thumb_draggable" format="boolean" /><!--user change the thumb's location by touching thumb/touching track,true for touching track to seek. false for touching thumb; default false-->
+        //indicator
+        <attr name="isb_show_indicator"><!-- the type of indicator, default rectangle_rounded_corner/0.-->
+            <enum name="none" value="0" />
+            <enum name="circular_bubble" value="1" />
+            <enum name="rounded_rectangle" value="2" />
+            <enum name="rectangle" value="3" />
+            <enum name="custom" value="4" /><!--choose custom type that you can set the custom indicator layout you want.-->
+        </attr>
+        <attr name="isb_indicator_color" format="color|reference" /><!-- indicator's color, default #FF4081-->
+        <attr name="isb_indicator_text_color" format="color|reference" /><!-- indicator's text color, default #FF4081 -->
+        <attr name="isb_indicator_text_size" format="dimension|reference" /><!-- indicator's text size, default 14sp-->
+        <attr name="isb_indicator_content_layout" format="reference" /><!-- when you set indicator type to custom , you can set ths indicator layout you want-->
+        <attr name="isb_indicator_top_content_layout" format="reference" /> <!--set the indicator's top view you want, not impact arrow , effect on indicator type : rectangle or rectangle_rounded_corner-->
+        //track
+        <attr name="isb_track_background_size" format="dimension|reference" /><!-- set indicatorSeekBar's track background bar size, default 2dp-->
+        <attr name="isb_track_background_color" format="color|reference" /><!-- set indicatorSeekBar's track background bar color, default #D7D7D7-->
+        <attr name="isb_track_progress_size" format="dimension|reference" /><!-- set indicatorSeekBar's track progress bar size, default 2dp-->
+        <attr name="isb_track_progress_color" format="color|reference" /><!-- set indicatorSeekBar's track progress bar color, default #FF4081-->
+        <attr name="isb_track_rounded_corners" format="boolean" /><!-- set the track's both ends' shape to round-->
+        //thumb text
+        <attr name="isb_thumb_text_color" format="color|reference" /><!--set thumb's color, default #FF4081-->
+        <attr name="isb_show_thumb_text" format="boolean" /><!--show thumb text or not, default false-->
+        //thumb
+        <attr name="isb_thumb_size" format="dimension|reference" /><!--set thumb's size, default 14dp, thumb size will be limited in 30dp-->
+        <attr name="isb_thumb_color" format="color|reference" /><!--set thumb's color, default #FF4081-->
+        <attr name="isb_thumb_drawable" format="reference" /><!--set custom thumb's drawable you want,thumb size will be limited in 30dp, if drawable less than 30dp ,will show in intrinsic size -->
+        <attr name="isb_thumb_adjust_auto" format="boolean" /><!--set the thumb move to the closed tick after touched up, default true-->
+        //tickMarks
+        <attr name="isb_tick_marks_color" format="color|reference" /><!--set tick's color, default #FF4081-->
+        <attr name="isb_tick_marks_size" format="dimension|reference" /><!--set the tick width, default 10dp,custom drawable will be limited in 30dp, if less than 30dp ,will show in intrinsic size-->
+        <attr name="isb_tick_marks_drawable" format="reference" /><!--set custom tick's drawable you want, custom drawable will be limited in 30dp, if less than 30dp ,will show in intrinsic size-->
+        <attr name="isb_tick_marks_ends_hide" format="boolean" /><!--hide 2 ticks on the seekBar's both ends, default false-->
+        <attr name="isb_tick_marks_swept_hide" format="boolean" /><!--hide the ticks on the seekBar's thumb left, default false-->
+        <attr name="isb_show_tick_marks_type"><!--select the tick shape type, default not show： NONE/0-->
+            <enum name="none" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="square" value="2" />
+            <enum name="divider" value="3" /> <!--show tickMarks shape as vertical line , line'size is 1 dp.-->
+        </attr>
+        //tickTexts
+        <attr name="isb_show_tick_texts" format="boolean" /><!--show the text below tick or not, default false-->
+        <attr name="isb_tick_texts_color" format="reference|color" /><!--set texts' color, default #FF4081-->
+        <attr name="isb_tick_texts_size" format="dimension|reference" /><!--set the text size of tick below text, default 13sp-->
+        <attr name="isb_tick_texts_array" format="reference" /><!--set the custom texts below tick to replace default progress text, default null-->
+        <attr name="isb_tick_texts_typeface"><!--select the typeface for tick texts/thumb text, default normal-->
+            <enum name="normal" value="0" />
+            <enum name="monospace" value="1" />
+            <enum name="sans" value="2" />
+            <enum name="serif" value="3" />
+        </attr>
+    </declare-styleable>
+
+</resources>

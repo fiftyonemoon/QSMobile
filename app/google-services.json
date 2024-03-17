@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "552499522191",
+    "firebase_url": "https://qsmobile-1feec.firebaseio.com",
+    "project_id": "qsmobile-1feec",
+    "storage_bucket": "qsmobile-1feec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552499522191:android:d4284a9fba5de7864f9efa",
+        "android_client_info": {
+          "package_name": "com.quicksolveplus.qspmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552499522191-logmd0becnus1voa12ju623evr92do4d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quicksolveplus.qspmobile",
+            "certificate_hash": "2e7631e3e282c714a910273d72e2d5ac6c3c1614"
+          }
+        },
+        {
+          "client_id": "552499522191-3ggj0uunqcodm7qra1tmckq0bktv29sc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdEOvdqm5-EF-DXg0Lg5OfUDfV7PEd5fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552499522191-3ggj0uunqcodm7qra1tmckq0bktv29sc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "552499522191-sh6ah5htis73846ddr0gde9ha6ss8svg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.quicksolveplus.qspmobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

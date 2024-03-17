@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="client_drawer_item">
+        <item>@string/str_cap_home</item>
+        <item>@string/str_cap_profile</item>
+        <item>@string/str_cap_contacts</item>
+        <item>@string/str_cap_doctors_visit</item>
+        <item>@string/str_cap_rxs</item>
+        <item>@string/str_cap_allergies</item>
+        <item>@string/str_cap_ihss_noa_pos</item>
+        <item>@string/str_cap_isp_objectives</item>
+        <item>@string/str_cap_eap</item>
+        <item>@string/str_cap_fir</item>
+        <item>@string/str_cap_connect_form</item>
+        <item>@string/str_cap_qa</item>
+        <item>@string/str_cap_documents</item>
+        <item>@string/str_cap_training_guide</item>
+        <item>@string/str_cap_change_client</item>
+        <item>@string/str_cap_log_off</item>
+    </array>
+
+    <!--<array name="open_shift_client_drawer_item">
+        <item>BACK</item>
+        <item>LINKED CLIENT 1</item>
+        <item>LINKED CLIENT 2</item>
+        <item>LINKED CLIENT 3</item>
+    </array>-->
+
+    <array name="employee_drawer_item">
+        <item>@string/str_cap_home</item>
+        <item>@string/str_cap_profile</item>
+        <item>@string/str_cap_trainer_requirement</item>
+        <item>@string/str_cap_client_training</item>
+        <item>@string/str_cap_tor</item>
+        <item>@string/str_cap_schedule_pref</item>
+        <item>@string/str_cap_connects</item>
+        <item>@string/str_cap_documents</item>
+        <item>@string/str_cap_settings</item>
+        <item>@string/str_cap_change_employee</item>
+        <item>@string/str_cap_log_off</item>
+    </array>
+
+    <array name="schedule_drawer_item">
+        <item>@string/str_cap_home</item>
+        <item>@string/str_cap_employee_view</item>
+        <item>@string/str_cap_client_view</item>
+        <item>@string/str_cap_pos_dashboard</item>
+        <item>@string/str_cap_ot_tracker</item>
+        <item>@string/str_cap_schedule_preference</item>
+        <item>@string/str_cap_trained_employees</item>
+        <item>@string/str_cap_log_off</item>
+    </array>
+
+    <!--<array name="schedule_view_drawer_item">
+        <item>Employee View</item>
+        <item>Client View</item>
+    </array>-->
+    <array name="schedule_view_drawer_item">
+        <item>@string/str_employee_view</item>
+        <item>@string/str_client_view</item>
+    </array>
+
+    <array name="doctors_instruction">
+        <item>Loose pill found</item>
+        <item>Controlled substance count off</item>
+        <item>Incorrectly taken, or missed, during Natural Support</item>
+        <item>Partially taken</item>
+        <item>Omission (Not taken, pill left in box, etc)</item>
+        <item>Failure to Document</item>
+        <item>Wrong Individual</item>
+        <item>Wrong Time</item>
+        <item>Wrong Medication</item>
+        <item>Wrong Dose</item>
+        <item>Wrong Route</item>
+        <item>Other (please describe)</item>
+    </array>
+
+    <array name="doctors_instruction_translated">
+        <item>@string/str_loose_pill_found</item>
+        <item>@string/str_controlled_substance_count_off</item>
+        <item>@string/str_incorrectly_taken_missed_natural_support</item>
+        <item>@string/str_partially_taken</item>
+        <item>@string/str_omission_not_taken</item>
+        <item>@string/str_failed_to_document</item>
+        <item>@string/str_wrong_individual</item>
+        <item>@string/str_wrong_time</item>
+        <item>@string/str_wrong_medication</item>
+        <item>@string/str_wrong_dose</item>
+        <item>@string/str_wrong_route</item>
+        <item>@string/str_other_please_subscribe</item>
+    </array>
+
+    <array name="state_short_name">
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+
+    </array>
+
+    <array name="state_full_name">
+        <item>Alabama</item>
+        <item>Alaska</item>
+        <item>Arizona</item>
+        <item>Arkansas</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Delaware</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Hawaii</item>
+        <item>Idaho</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Iowa</item>
+        <item>Kansas</item>
+        <item>Kentucky</item>
+        <item>Louisiana</item>
+        <item>Maine</item>
+        <item>Maryland</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Mississippi</item>
+        <item>Missouri</item>
+        <item>Montana</item>
+        <item>Nebraska</item>
+        <item>Nevada</item>
+        <item>New Hampshire</item>
+        <item>New Jersey</item>
+        <item>New Mexico</item>
+        <item>New York</item>
+        <item>North Carolina</item>
+        <item>North Dakota</item>
+        <item>Ohio</item>
+        <item>Oklahoma</item>
+        <item>Oregon</item>
+        <item>Pennsylvania</item>
+        <item>Rhode Island</item>
+        <item>South Carolina</item>
+        <item>South Dakota</item>
+        <item>Tennessee</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Vermont</item>
+        <item>Virginia</item>
+        <item>Washington</item>
+        <item>West Virginia</item>
+        <item>Wisconsin</item>
+        <item>Wyoming</item>
+
+    </array>
+
+    <!--<array name="ILS_Service_array">
+        &lt;!&ndash; <item>IHSS</item>&ndash;&gt;
+        <item>ILS Admin</item>
+        <item>ILS Assessment</item>
+        <item>ILS Misc</item>
+        <item>ILS Service</item>
+        <item>ILS Training</item>
+        <item>ILS Travel</item>
+        <item>Housing Search</item>
+        &lt;!&ndash;   <item>Natural Support</item>&ndash;&gt;
+
+    </array>-->
+    <!--<array name="SLS_Service_array">
+        <item>IHDP</item>
+        <item>IHSS</item>
+        <item>Housing Search</item>
+        <item>Natural Support</item>
+        <item>Parenting Support</item>
+        <item>Parenting Support Training</item>
+        <item>SLS</item>
+        <item>SLS-Shared</item>
+        <item>SLS Training-Premium</item>
+        <item>SLS Training-Standard</item>
+    </array>-->
+
+    <!--<array name="client_connect_type">
+        <item>Community Visit</item>
+        <item>Current Goal</item>
+        <item>Group Meeting</item>
+        <item>Home Visit</item>
+        <item>Monthly Notes</item>
+        <item>Office Visit</item>
+        <item>Staffing Schedule</item>
+        <item>Tech Meeting</item>
+    </array>-->
+
+    <!--<array name="community_visit_type">
+        <item>Day Program/Work Site</item>
+        <item>Doctor Visit</item>
+        <item>Fun Visit</item>
+    </array>-->
+
+    <array name="month_list">
+        <item>@string/lbl_select</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+    <!--<array name="group_meeting_type">
+        <item>Circle Meeting</item>
+        <item>IDT</item>
+        <item>ISP/Quarterly</item>
+        <item>Planning/Life Path Meeting</item>
+    </array>-->
+
+    <!--<array name="home_visit_type">
+        <item>Drop In</item>
+        <item>Monthly</item>
+        <item>Routine</item>
+        <item>Scheduled</item>
+        <item>Semi-Monthly</item>
+        <item>Special</item>
+        <item>Staff Training</item>
+        <item>Weekly</item>
+    </array>-->
+    
+    <!--<array name="office_visit_type">
+        <item>Drop In</item>
+        <item>Scheduled</item>
+    </array>-->
+
+    <!--<array name="tech_meeting_type">
+        <item>Email</item>
+        <item>Phone</item>
+        <item>Text</item>
+
+    </array>-->
+
+    <array name="qa_finances_cl_money_mgmt">
+        <item>@string/str_has_rep_payee</item>
+        <item>@string/str_not_have_rep_payee</item>
+        <item>@string/str_family_conservator</item>
+        <item>@string/str_self</item>
+        <item>@string/str_agency_assists</item>
+        <item>@string/str_finances_other</item>
+    </array>
+
+</resources>

@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".schedule.ScheduleShiftDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_schedule_shift_details_toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:id="@+id/tvClientName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvServiceType"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvClientNameLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_client_name"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="@+id/tvClientName"
+                    app:layout_constraintEnd_toEndOf="@+id/tvClientName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvClientName" />
+
+                <TextView
+                    android:id="@+id/tvServiceType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    app:layout_constraintStart_toEndOf="@+id/tvClientName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvServiceTypeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_service_type"
+                    android:textSize="12sp"
+                    android:gravity="end"
+                    app:layout_constraintStart_toStartOf="@+id/tvServiceType"
+                    app:layout_constraintEnd_toEndOf="@+id/tvServiceType"
+                    app:layout_constraintTop_toBottomOf="@+id/tvServiceType" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clServiceDeliveryMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:id="@+id/tvServiceDeliveryMethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvServiceDeliveryMethodLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_service_delivery_method"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvServiceDeliveryMethod" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvPOSHoursRemaining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="@color/red"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/str_pos_hours_remaining"
+                android:gravity="start" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clStartEndHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTotalHours"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvStartTimeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_start_time"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="@id/tvStartTime"
+                    app:layout_constraintEnd_toEndOf="@+id/tvStartTime"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStartTime" />
+
+                <TextView
+                    android:id="@+id/tvTotalHours"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/tvStartTime"
+                    app:layout_constraintEnd_toStartOf="@+id/tvEndTime"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTotalHoursLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_total_hours"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="@+id/tvTotalHours"
+                    app:layout_constraintEnd_toEndOf="@id/tvTotalHours"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTotalHours" />
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    app:layout_constraintStart_toEndOf="@+id/tvTotalHours"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEndTimeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_end_time"
+                    android:textSize="12sp"
+                    android:gravity="end"
+                    app:layout_constraintStart_toStartOf="@+id/tvEndTime"
+                    app:layout_constraintEnd_toEndOf="@id/tvEndTime"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEndTime" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTimeInOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:id="@+id/tvTimeOut"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="@id/tvTimeOutLabel"
+                    app:layout_constraintEnd_toEndOf="@+id/tvTimeOutLabel"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTimeOutLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_time_out"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvRestPeriodLabel"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cbRestPeriod"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/bt_checkbox_blue"
+                    android:contentDescription="@null"
+                    app:layout_constraintStart_toStartOf="@+id/tvRestPeriodLabel"
+                    app:layout_constraintEnd_toEndOf="@+id/tvRestPeriodLabel"
+                    app:layout_constraintBottom_toTopOf="@+id/tvRestPeriodLabel" />
+
+                <TextView
+                    android:id="@+id/tvRestPeriodLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_rest_period"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/tvTimeOutLabel"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTimeInLabel"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTimeIn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    app:layout_constraintStart_toStartOf="@+id/tvTimeInLabel"
+                    app:layout_constraintEnd_toEndOf="@id/tvTimeInLabel"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTimeInLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_time_in"
+                    android:textSize="12sp"
+                    android:gravity="end"
+                    app:layout_constraintStart_toEndOf="@+id/tvRestPeriodLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clStartEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvEndDate"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvStartDateLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_start_date"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="@+id/tvStartDate"
+                    app:layout_constraintEnd_toEndOf="@+id/tvStartDate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStartDate" />
+
+                <TextView
+                    android:id="@+id/tvEndDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    app:layout_constraintStart_toEndOf="@+id/tvStartDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEndDateLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_end_date"
+                    android:textSize="12sp"
+                    android:gravity="end"
+                    app:layout_constraintStart_toStartOf="@+id/tvEndDate"
+                    app:layout_constraintEnd_toEndOf="@+id/tvEndDate"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEndDate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clOTExempt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <ImageView
+                    android:id="@+id/cbOTExempt"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginVertical="6dp"
+                    android:src="@drawable/bt_checkbox_blue"
+                    android:contentDescription="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textColor="@color/black_50"
+                    android:text="@string/str_ot_exempt_sleep_shift"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toEndOf="@+id/cbOTExempt"
+                    app:layout_constraintTop_toTopOf="@id/cbOTExempt"
+                    app:layout_constraintBottom_toBottomOf="@id/cbOTExempt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSleepHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etSleepHours"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    android:background="@drawable/rectangle_white_with_border"
+                    android:inputType="numberDecimal"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:gravity="top"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvHrs"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHrs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:text="@string/str_med_prn_interval_hrs"
+                    android:textSize="12sp"
+                    android:textColor="@color/black_50"
+                    app:layout_constraintStart_toEndOf="@+id/etSleepHours"
+                    app:layout_constraintEnd_toStartOf="@+id/llMinusPlus"
+                    app:layout_constraintTop_toTopOf="@+id/etSleepHours"
+                    app:layout_constraintBottom_toBottomOf="@+id/etSleepHours" />
+
+                <LinearLayout
+                    android:id="@+id/llMinusPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/rectangle_app_color_radius_8"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/tvHrs"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/etSleepHours"
+                    app:layout_constraintBottom_toBottomOf="@+id/etSleepHours">
+
+                    <TextView
+                        android:id="@+id/tvMinus"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="match_parent"
+                        android:text="@string/str_minus"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvPlus"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="match_parent"
+                        android:text="@string/str_plus"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_sleep_hours"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="@+id/etSleepHours"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etSleepHours" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clEmployeeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:id="@+id/tvEmployeeName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEmployeeNameLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_employee_name"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEmployeeName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:id="@+id/tvAddMileage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/str_add_mileage"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivDropDown"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_dropdown_arrow"
+                    android:contentDescription="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvAddMileage"
+                    app:layout_constraintBottom_toBottomOf="@id/tvAddMileage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMilesDriven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etMiles"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvMilesLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_miles_driven"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etMiles" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvFromLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_from"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/etFrom" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_locator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDestination1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDestination1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDestination1Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_destination_1"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation1"
+                    app:layout_constraintTop_toBottomOf="@+id/etDestination1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLocation1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_locator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDestination2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDestination2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDestination2Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_destination_2"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation2"
+                    app:layout_constraintTop_toBottomOf="@+id/etDestination2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLocation2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_locator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDestination3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDestination3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDestination3Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_destination_3"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation3"
+                    app:layout_constraintTop_toBottomOf="@+id/etDestination3" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLocation3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_locator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDestination4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDestination4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDestination4Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_destination_4"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation4"
+                    app:layout_constraintTop_toBottomOf="@+id/etDestination4" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLocation4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_locator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDestination5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDestination5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDestination5Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_destination_5"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation5"
+                    app:layout_constraintTop_toBottomOf="@+id/etDestination5" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLocation5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_locator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDestination6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDestination6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDestination6Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_destination_6"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLocation6"
+                    app:layout_constraintTop_toBottomOf="@+id/etDestination6" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLocation6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_locator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clScheduleNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etScheduleNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="top"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvScheduleNotesLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_schedule_notes"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etScheduleNotes" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clServiceNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etServiceNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:background="@null"
+                    android:textColor="@color/app_color"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="top"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvServiceNotesLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_service_notes"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etServiceNotes" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clShiftObjective"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_objective"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAddObjectives"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvAddObjectives" />
+
+                <TextView
+                    android:id="@+id/tvAddObjectives"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    android:background="@drawable/rectangle_app_color_radius_8"
+                    android:textColor="@color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_cap_add"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.quicksolveplus.utils.NonScrollingListView
+                    android:id="@+id/lvShiftObjectives"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddObjectives" />
+
+                <TextView
+                    android:id="@+id/tvNoObjectives"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:background="@null"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_no_objectives_found_err"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lvShiftObjectives"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clShiftSubCodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:visibility="gone"
+                android:background="@drawable/rectangle_white_with_radius">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_subcodes"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAddSubCodes"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvAddSubCodes" />
+
+                <TextView
+                    android:id="@+id/tvAddSubCodes"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    android:background="@drawable/rectangle_app_color_radius_8"
+                    android:textColor="@color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_cap_add"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.quicksolveplus.utils.NonScrollingListView
+                    android:id="@+id/lvShiftSubCodes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddSubCodes" />
+
+                <TextView
+                    android:id="@+id/tvNoSubCodes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:background="@null"
+                    android:textColor="@color/black_50"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/str_no_subcodes_found_err"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lvShiftSubCodes"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvTrackAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/rectangle_app_color_radius_8"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="@string/str_track_attendance_title" />
+
+            <TextView
+                android:id="@+id/tvClientContactInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:padding="@dimen/_8sdp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/str_view_client_contact_info" />
+
+            <TextView
+                android:id="@+id/tvClockDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/str_view_clock_details" />
+
+            <include
+                android:id="@+id/clockDetails"
+                layout="@layout/layout_view_clock_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

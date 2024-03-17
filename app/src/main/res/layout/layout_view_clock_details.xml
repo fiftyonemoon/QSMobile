@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llClockIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llClockOut"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:src="@drawable/ic_timeron" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:text="@string/str_qsClock_clock_in" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llClockOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/llClockIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:src="@drawable/ic_timeroff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:text="@string/str_qsClock_clock_out" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llClockInTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/llClockIn"
+        app:layout_constraintTop_toBottomOf="@id/llClockIn">
+
+        <TextView
+            android:id="@+id/tvClockInTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_time"
+            android:textSize="11sp"
+            android:gravity="start" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llClockOutTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/llClockOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llClockOut">
+
+        <TextView
+            android:id="@+id/tvClockOutTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="end" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_time"
+            android:textSize="11sp"
+            android:gravity="end" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llClockInLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/llClockIn"
+        app:layout_constraintTop_toBottomOf="@id/llClockInTime">
+
+        <TextView
+            android:id="@+id/tvClockInLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:text="@string/str_selection"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_location"
+            android:textSize="11sp"
+            android:gravity="start" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llClockOutLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/llClockOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llClockOutTime">
+
+        <TextView
+            android:id="@+id/tvClockOutLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:text="@string/str_selection"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="end" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_location"
+            android:textSize="11sp"
+            android:gravity="end" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llClockInLat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/llClockIn"
+        app:layout_constraintTop_toBottomOf="@id/llClockInLocation">
+
+        <TextView
+            android:id="@+id/tvClockInLat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_latitude"
+            android:textSize="11sp"
+            android:gravity="start" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llClockOutLat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/llClockOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llClockOutLocation">
+
+        <TextView
+            android:id="@+id/tvClockOutLat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="end" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_latitude"
+            android:textSize="11sp"
+            android:gravity="end" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llClockInLng"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/llClockIn"
+        app:layout_constraintTop_toBottomOf="@id/llClockInLat">
+
+        <TextView
+            android:id="@+id/tvClockInLng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_longitude"
+            android:textSize="11sp"
+            android:gravity="start" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llClockOutLng"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/llClockOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llClockOutLat">
+
+        <TextView
+            android:id="@+id/tvClockOutLng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="end" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_longitude"
+            android:textSize="11sp"
+            android:gravity="end" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/tvMapClockIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_app_color_radius_8"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/str_map_clock_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/llClockInLng"
+        app:layout_constraintTop_toBottomOf="@+id/llClockInLng" />
+
+    <TextView
+        android:id="@+id/tvMapClockOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_app_color_radius_8"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/str_map_clock_out"
+        app:layout_constraintStart_toStartOf="@id/llClockOutLng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llClockOutLng" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llChangeReason"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMapClockIn">
+
+        <TextView
+            android:id="@+id/tvChangeReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:text="@string/str_selection" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_change_reason"
+            android:textSize="11sp"
+            android:gravity="start" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llChangeReasonNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/rectangle_white_with_radius"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llChangeReason">
+
+        <TextView
+            android:id="@+id/tvChangeReasonNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_color"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textColor="@color/black_50"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/str_change_reason_note"
+            android:textSize="11sp"
+            android:gravity="start" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

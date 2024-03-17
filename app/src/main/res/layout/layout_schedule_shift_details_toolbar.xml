@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:elevation="@dimen/_3sdp">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="@null" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/ivBack"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/ic_trash"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:text="@string/str_shiftDetail" />
+
+    <ImageView
+        android:id="@+id/ivLink"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:src="@drawable/ic_link"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/ivSave"
+        android:layout_marginEnd="@dimen/_10sdp" />
+
+    <ImageView
+        android:id="@+id/ivSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_save"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_10sdp" />
+
+</RelativeLayout>
